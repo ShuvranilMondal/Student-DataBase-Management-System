@@ -8,12 +8,16 @@ function LoginPage(Props) {
     let file = false
 
     useEffect(()=>{
+        RealoadAPI()
+    },[])
+
+    function RealoadAPI(){
         fetch('http://localhost:3000/comments').then((ree)=>{
             ree.json().then((respo)=>{
                 setProData(respo)
             })
         })
-    },[])
+    }
 
     let ParentUserID, ParentCreatPass, ParentConfirmPass
 
@@ -58,6 +62,7 @@ function LoginPage(Props) {
             }).then((re) => {
                 re.json().then((req) => {
                     console.log(req)
+                    RealoadAPI()
                     alert('Creact Account')
                 })
             })
@@ -100,9 +105,9 @@ function LoginPage(Props) {
                 <form onSubmit={clearData}>
                     <i className="fas fa-user-plus"></i>
                     <input type='text' placeholder='UserID' required value={createID} onChange={(e) => setCreateid(e.target.value)} />
-                    <input type='password' placeholder='Creat Password' required value={createPassword} onChange={(k) => setCreatePassword(k.target.value)} />
+                    <input type='password' placeholder='Create Password' required value={createPassword} onChange={(k) => setCreatePassword(k.target.value)} />
                     <input type='password' placeholder='Confirm Password' required value={confirmPassword} onChange={(i) => setConfirmPassword(i.target.value)} />
-                    <button type='submit' id='logInBTN'>Creat</button>
+                    <button type='submit' id='logInBTN'>Create</button>
                     <button id='SignUPBTN' onClick={() => setViaual(true)}>Log in</button>
                 </form>
             </div>
