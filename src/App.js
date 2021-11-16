@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import './style/file.css'
+import LoginPage from './LoginPage_1';
+import { useState } from 'react';
+import FormPage from './FormPage';
 
 function App() {
+  let [unlock , setunlock] = useState(false)
+  function preData(da){
+    setunlock(da)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        unlock?<FormPage/>:
+        <LoginPage item={preData}></LoginPage>
+      }
+      {/* <FormPage/> */}
     </div>
   );
 }

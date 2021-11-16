@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+@mixin btn {
+    display: inline-block;
+    font-size: 1rem;
+    color: white;
+    background-color: rgb(0, 110, 255);
+    padding: 0.2em 0.5em;
+    border-radius: 5px;
+    margin-top: 1rem;
+    box-shadow: none;
+    border-color: rgb(0, 110, 255);
+
+    &:hover{
+        background-color: rgb(0, 0, 209);
+    }
+}
+@mixin  tran {
+    transition: all 0.2s ease-in-out;
+}
+.App{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+
+
+    .tbtn{
+        @include btn;
+        margin-top: 0;
+        @include tran;
+    }
+    td{
+        font-size: 1rem !important;
+    }
+    .nil3{
+        font-size: 0.8rem !important;
+    }
+
+    // Login page Style
+
+    .mainBox{
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/1900901.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .signIn{
+            text-align: center;
+            width: 20rem;
+            min-height: 25rem;
+            height: auto;
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+
+            i{
+                display: block;
+                font-size: 5rem;
+                color: rgb(0, 110, 255);
+                margin: 2rem 5rem;
+            }
+
+            input{
+                display: block;
+                width: 95%;
+                height: 2rem;
+                margin-bottom: 1rem;
+                outline: none;
+                border: none;
+                border-radius: 10px;
+                font-size: 1rem;
+                border: 2px solid gray;
+                box-shadow: none;
+                padding-left: 0.5rem;
+            }
+
+            #logInBTN{
+                @include btn;
+                @include tran;
+                margin-right: 1rem;
+            }
+            #SignUPBTN{
+                @include tran;
+                @include btn;
+            }
+        }
+    }
+
+
+
+    // InputPage
+    .inputBG{
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/dark-blue-wallpaper-preview.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .Black{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.589);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .popup{
+                width: 25rem;
+                height: 15rem;
+                background-color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                border-radius:5px ;
+
+                i{
+                    font-size: 2.5rem;
+                    color: green;
+                }
+                .pophed{
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    font-size: 1rem !important;
+                    margin:1rem 1rem !important ;
+                }
+                button{
+                    @include btn;
+                    margin-top: 0;
+                    @include tran;
+                }
+            }
+        }
+
+        .container{
+            box-sizing: border-box;
+            // border: 2px solid white;
+            width: 100%;
+            height: 4.5rem;
+
+            .navbar{
+                width: 90%;
+                margin: 0 auto;
+                max-width: 1200px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 100%;
+                i{
+                    color: white;
+                    font-size: 2rem;
+                }
+                .nav-con{
+                    display: flex;
+                    flex-direction: row;
+                    .SeBar{
+                        box-sizing: border-box;
+                        width: 20rem;
+                        height: 2rem;
+                        border: 2px solid white;
+                        background-color: transparent;
+                        margin-right: 2rem;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 0 10px 0 5px;
+                        border-radius: 30px;
+                        i{
+                            color: white;
+                            font-size: 1rem;
+                        }
+                        input{
+                            height: 100%;
+                            display: block;
+                            border: none;
+                            outline: none;
+                            font-size: 1rem;
+                            color: white;
+                            background-color: transparent;
+                            padding-left: 1rem;
+                        }
+                    }
+                    .homeBtn{
+                        display: inline-block;
+                        margin-right: 1rem;
+                        text-decoration: none;
+                        color: white;
+                        font-size: 1rem;
+                        border-bottom: 1px solid;
+                        border-color: transparent;
+                        @include tran;
+
+                        &:hover{
+                            color: rgb(204, 204, 204);
+                            border-color: rgb(204, 204, 204);
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .showCase{
+            box-sizing: border-box;
+            // border: 2px solid red;
+            width: 90%;
+            margin: 0 auto;
+            height: 85%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+
+            .title{
+                width: 40%;
+                height: 100%;
+                // background-color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .nil{
+                    text-align: center;
+                    font-weight: 400 !important;
+                    color: white;
+                    font-size: 2rem !important;
+                    text-transform: capitalize;
+                }
+
+                .imgFile{
+                    top: -20;
+                    width: 10rem;
+                    height: 10rem;
+                    // transform: rotate(0deg);
+                    img{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;   
+                    }
+                    @include tran;
+                    animation: imgani 10s infinite linear;
+                }
+                @keyframes imgani {
+                    0%{
+                        transform: rotate(0deg);
+                    }
+                    100%{
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+            .formWindow{
+                
+                text-align: center;
+                box-sizing: border-box;
+                width: 40%;
+                height: 100%;
+                // background-color: white;
+                padding: 2rem;
+                .nil2{
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    color: white !important;
+                    font-size: 1.2rem !important;
+                    margin-bottom: 1rem !important;
+                }
+                form{
+                    flex-direction: column;
+                    display: flex;
+                    align-items:center ;
+                    width: 100%;
+                    height: 100%;
+                    input{
+                        display: block;
+                        width: 80%;
+                        height: 2rem;
+                        margin-bottom: 1rem;
+                        border-radius: 5px;
+                        outline: none;
+                        border: none;
+                        font-size: 1rem;
+                        border: 2px solid rgb(184, 184, 184);
+                        box-shadow: none;
+                        padding-left: 0.5rem;
+                        background-color: transparent;
+                        color: white;
+                    }
+                    textarea{
+                        display: block;
+                        width: 80%;
+                        height: 40%;
+                        outline: none;
+                        border: none;
+                        font-size: 1rem;
+                        border: 2px solid rgb(184, 184, 184);
+                        padding: 0.5rem;
+                        font-size: 1rem;
+                        color: white;
+                        background-color: transparent;
+                    }
+                    #dataSub{
+                        @include btn;
+                        @include tran;
+                        border-color: white;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    .Black{
+        .fillpop{
+            box-sizing: border-box;
+            transform: translateY(-50px);
+            width: 20rem;
+            min-height: 25rem;
+            height: auto;
+            background-color: white;
+            padding: 1rem;
+            border-radius: 5px;
+
+            .fillwindow{
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                input{
+                    display: block;
+                    width: 100%;
+                    height: 2rem;
+                    margin-top: 1rem;
+                    outline: none;
+                    border: 2px solid gray;
+                    font-size: 1rem;
+                    padding: 0.5rem;
+                    border-radius: 5px;
+                }
+                textarea{
+                    display: block;
+                    width: 100%;
+                    height: 10rem;
+                    margin-top: 1rem;
+                    outline: none;
+                    border: 2px solid gray;
+                    font-size: 1rem;
+                    padding: 0.5rem;
+                    border-radius: 5px;
+                }
+                button{
+                    @include btn;
+                    @include tran;
+                }
+            }
+        }
+    }
+    
+}
+
+
+
+

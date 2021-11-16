@@ -1,0 +1,57 @@
+{
+  "posts": [
+    {
+      "uName": "Shuvranil Mondal",
+      "uEmail": "nil@gmail.com",
+      "uPhone": "7718155446",
+      "uAdd": "Midnapore, West Medinipur",
+      "id": 1
+    },
+    {
+      "uName": "Ironman",
+      "uEmail": "iron@gmail",
+      "uPhone": "897856324",
+      "uAdd": "new York",
+      "id": 2
+    },
+    {
+      "uName": "Santanu Ghose",
+      "uEmail": "santanu@gmail.com",
+      "uPhone": "45443643",
+      "uAdd": "Bankura",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "ParentUserID": "BlackAdam",
+      "ParentCreatPass": "kutta",
+      "id": 1
+    },
+    {
+      "ParentUserID": "Shuvranil Mondal",
+      "ParentCreatPass": "1234",
+      "id": 2
+    },
+    {
+      "ParentUserID": "nil",
+      "ParentCreatPass": "123",
+      "id": 3
+    },
+    {
+      "ParentUserID": "hari",
+      "ParentCreatPass": "123",
+      "id": 4
+    },
+    {
+      "ParentUserID": "Santanu",
+      "ParentCreatPass": "123",
+      "id": 5
+    },
+    {
+      "ParentUserID": "Batman",
+      "ParentCreatPass": "265901",
+      "id": 6
+    }
+  ]
+}
